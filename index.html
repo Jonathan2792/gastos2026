@@ -20,10 +20,7 @@ h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; color: #1a1a2e; }
 .card-corner { position: absolute; top: 0; right: 0; width: 36px; height: 36px; border-radius: 0 10px 0 36px; }
 .prog-bg { margin-top: 10px; height: 3px; background: #e0e0e8; border-radius: 2px; }
 .prog-fill { height: 100%; border-radius: 2px; transition: width 0.4s; }
-
 .section-title { font-size: 10px; letter-spacing: 3px; color: #bbb; font-weight: 700; text-transform: uppercase; margin: 20px 0 12px; }
-
-/* TWO SAVINGS PANELS */
 .sav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
 @media(max-width:700px){ .sav-grid { grid-template-columns: 1fr; } }
 .sav-panel { border-radius: 12px; border: 1px solid #e8e8f0; overflow: hidden; }
@@ -31,17 +28,18 @@ h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; color: #1a1a2e; }
 .sav-panel-header .total-val { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
 .sav-table { border-collapse: collapse; width: 100%; }
 .sav-table th { font-size: 9px; letter-spacing: 2px; color: #bbb; font-weight: 700; padding: 8px 10px; text-align: center; background: #f9f9fc; border-top: 1px solid #eee; }
-.sav-table th.sleft { text-align: left; }
+.sav-table th.sleft { text-align: left; min-width: 120px; }
+.sav-table th.scur { color: #7B61FF; background: rgba(123,97,255,0.08); }
+.sav-table th.spast { color: #ddd; }
 .sav-table td { padding: 8px 10px; font-size: 12px; text-align: center; border-bottom: 1px solid #f5f5fa; }
 .sav-table td.sleft { text-align: left; font-weight: 600; border-left: 3px solid; font-size: 12px; }
 .sav-table tr:last-child td { border-bottom: none; }
 .sav-table td.scur { background: rgba(123,97,255,0.05); }
-.sav-table th.scur { color: #7B61FF; background: rgba(123,97,255,0.08); }
+.sav-table td.spast { color: #ddd; font-size: 11px; }
+.sav-table td.sfut { color: #aaa; }
 .sav-input { width: 74px; text-align: right; padding: 3px 5px; background: #f5f5fa; border: 1px solid #ddd; border-radius: 5px; color: #1a1a2e; font-size: 12px; font-family: inherit; font-weight: 600; outline: none; }
 .sav-input:focus { border-color: #7B61FF; }
 .sav-input.usd { border-color: #bbdcf0; background: #f0f8ff; }
-
-/* INCOME */
 .income-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
 .ipanel { background: #f7f7fc; border-radius: 10px; padding: 16px; border-top: 3px solid; }
 .ipanel-title { font-size: 11px; letter-spacing: 3px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; }
@@ -51,10 +49,8 @@ h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; color: #1a1a2e; }
 .val { font-size: 14px; font-weight: 700; color: #1a1a2e; }
 .val.neg { color: #e05c5c; } .val.pos { color: #00C896; } .val.warn { color: #FF9F43; } .val.bad { color: #e05c5c; } .val.blue { color: #0EA5E9; }
 .mini-input { width: 72px; text-align: right; padding: 2px 5px; background: #fff; border: 1px solid #ddd; border-radius: 5px; color: #1a1a2e; font-size: 13px; font-family: inherit; font-weight: 700; outline: none; }
-
 .tc-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; font-size: 13px; color: #999; flex-wrap: wrap; }
 .tc-input { width: 72px; padding: 5px 8px; font-family: inherit; background: #f5f5fa; border: 1px solid #ddd; border-radius: 6px; color: #1a1a2e; font-size: 13px; outline: none; }
-
 .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid #e8e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.04); margin-bottom: 12px; }
 table.exp { border-collapse: collapse; min-width: 1000px; width: 100%; }
 table.exp thead tr { background: #f4f4fa; }
@@ -62,12 +58,14 @@ table.exp th { font-size: 10px; letter-spacing: 2px; color: #bbb; font-weight: 7
 table.exp th.ncol { text-align: left; padding: 11px 16px; position: sticky; left: 0; background: #f4f4fa; z-index: 2; min-width: 190px; }
 table.exp th.acol { text-align: right; padding: 11px 12px; min-width: 95px; }
 table.exp th.ecur { color: #7B61FF; background: rgba(123,97,255,0.09); }
+table.exp th.epast { color: #ddd; }
 .cat-hdr td { padding: 10px 16px 3px; font-size: 10px; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; background: #fff; }
 .ncell { padding: 8px 16px; font-size: 13px; font-weight: 500; white-space: nowrap; position: sticky; left: 0; z-index: 1; border-left: 3px solid; }
 .acell { text-align: right; padding: 8px 12px; font-size: 13px; font-weight: 600; white-space: nowrap; color: #444; }
 .var-in { width: 62px; text-align: right; padding: 2px 4px; background: #f5f5fa; border: 1px solid #ddd; border-radius: 5px; color: #1a1a2e; font-size: 12px; font-family: inherit; outline: none; }
 .mcell { text-align: center; padding: 5px 3px; }
 .mcell.ecur { background: rgba(123,97,255,0.06); }
+.mcell.epast { opacity: 0.35; }
 .chk { width: 27px; height: 27px; border-radius: 6px; border: 2px solid #e0e0e0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 13px; font-weight: 800; color: #fff; transition: all 0.1s; }
 .chk:hover { border-color: #bbb; }
 .inact { color: #e8e8e8; text-align: center; line-height: 27px; font-size: 11px; }
@@ -76,6 +74,7 @@ table.exp th.ecur { color: #7B61FF; background: rgba(123,97,255,0.09); }
 .trow td { padding: 12px 4px; text-align: center; font-size: 13px; font-weight: 800; color: #00C896; }
 .trow .ncell { font-size: 11px; color: #888; letter-spacing: 1px; text-transform: uppercase; background: #f4f4fa; }
 .trow .ecur { color: #7B61FF; background: rgba(123,97,255,0.08); }
+.trow .epast { opacity:0.3; }
 .srow { background: #fafafa; }
 .srow td { padding: 3px; text-align: center; font-size: 9px; color: #bbb; }
 .srow .ncell { background: #fafafa; font-size: 9px; }
@@ -88,7 +87,7 @@ table.exp th.ecur { color: #7B61FF; background: rgba(123,97,255,0.09); }
 </head>
 <body>
 
-<div class="header-label">2026 · Finanzas Personales</div>
+<div class="header-label">2026 · Finanzas Personales — inicio: Abril</div>
 <div class="top-header">
   <h1>CONTROL DE GASTOS</h1>
   <button class="print-btn" onclick="window.print()">🖨 Imprimir</button>
@@ -97,46 +96,28 @@ table.exp th.ecur { color: #7B61FF; background: rgba(123,97,255,0.09); }
 <div class="cards" id="cards"></div>
 <div class="divider"></div>
 
-<!-- SAVINGS -->
-<div class="section-title">💰 Ahorro · dos bolsillos</div>
+<div class="section-title">💰 Ahorro · dos bolsillos · desde abril 2026</div>
 <div class="sav-grid">
-
-  <!-- SOLES -->
   <div class="sav-panel">
     <div class="sav-panel-header" style="background:#f4f2ff;color:#7B61FF">
       <span>Soles <span style="font-size:9px;font-weight:400;letter-spacing:1px;opacity:0.7">· 4.5% anual</span></span>
       <span class="total-val" id="pen-eoy-hdr">—</span>
     </div>
-    <div style="overflow-x:auto">
-      <table class="sav-table">
-        <thead><tr id="pen-head"></tr></thead>
-        <tbody id="pen-body"></tbody>
-      </table>
-    </div>
+    <div style="overflow-x:auto"><table class="sav-table"><thead><tr id="pen-head"></tr></thead><tbody id="pen-body"></tbody></table></div>
   </div>
-
-  <!-- USD -->
   <div class="sav-panel">
     <div class="sav-panel-header" style="background:#f0f8ff;color:#0EA5E9">
       <span>Dólares <span style="font-size:9px;font-weight:400;letter-spacing:1px;opacity:0.7">· sin rentabilidad</span></span>
       <span class="total-val" id="usd-eoy-hdr">—</span>
     </div>
-    <div style="overflow-x:auto">
-      <table class="sav-table">
-        <thead><tr id="usd-head"></tr></thead>
-        <tbody id="usd-body"></tbody>
-      </table>
-    </div>
+    <div style="overflow-x:auto"><table class="sav-table"><thead><tr id="usd-head"></tr></thead><tbody id="usd-body"></tbody></table></div>
   </div>
-
 </div>
 
-<!-- TOTAL PATRIMONIO -->
 <div id="patrimonio" style="background:#f7f7fc;border-radius:10px;padding:14px 18px;margin-bottom:20px;display:flex;gap:24px;flex-wrap:wrap;align-items:center"></div>
 
 <div class="divider"></div>
 
-<!-- INCOME -->
 <div class="section-title">📊 Distribución de ingresos · <span id="income-month"></span></div>
 <div class="income-grid">
   <div class="ipanel" style="border-top-color:#7B61FF">
@@ -158,7 +139,7 @@ table.exp th.ecur { color: #7B61FF; background: rgba(123,97,255,0.09); }
     <div class="ipanel-title" style="color:#FF9F43">Resumen mensual</div>
     <div class="irow"><span>Ahorro USD (Jon)</span><span class="val blue" id="res-usd"></span></div>
     <div class="irow"><span>Ahorro S/ (esposa)</span><span class="val" id="res-pen"></span></div>
-    <div class="irow"><span>Extra S/ (variable)</span><span class="val pos" id="res-extra"></span></div>
+    <div class="irow"><span>Extra S/ este mes</span><span class="val pos" id="res-extra"></span></div>
     <div class="irow itotal"><span>Total en soles</span><span class="val" id="res-total"></span></div>
     <div class="irow" style="font-size:11px;color:#bbb;border:none;padding-top:4px">
       <span>% del ingreso familiar</span>
@@ -176,20 +157,16 @@ table.exp th.ecur { color: #7B61FF; background: rgba(123,97,255,0.09); }
 </div>
 
 <div class="table-wrap">
-  <table class="exp">
-    <thead id="thead"></thead>
-    <tbody id="tbody"></tbody>
-  </table>
+  <table class="exp"><thead id="thead"></thead><tbody id="tbody"></tbody></table>
 </div>
-<div class="footer">✓ MARCA CADA GASTO COMO PAGADO · SUSCRIPCIONES: MARCA SOLO LAS QUE PAGASTE ESE MES</div>
+<div class="footer">✓ MARCA CADA GASTO COMO PAGADO · SUSCRIPCIONES: MARCA SOLO LAS QUE PAGASTE ESE MES · ENE–MAR DESHABILITADOS</div>
 
 <script>
 const MONTHS=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 const MONTH_FULL=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-const CM=new Date().getMonth();
+const START=3; // April = index 3, real start of tracking
+const CM=new Date().getMonth(); // should be 3 (April)
 const RATE=0.045/12;
-
-// Initial savings
 const INIT_PEN=106000;
 const INIT_USD=7800;
 
@@ -227,8 +204,8 @@ const EXPENSES=[
 
 const checks={};
 const varAmounts={3:150,8:30,9:1400};
-const extraPEN=new Array(12).fill(0); // variable PEN deposits per month
-const extraUSD=new Array(12).fill(0); // optional extra USD deposits
+const extraPEN=new Array(12).fill(0);
+const extraUSD=new Array(12).fill(0);
 
 const fmt=n=>Math.round(n).toLocaleString('es-PE');
 const fmtU=n=>n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});
@@ -239,16 +216,16 @@ function getFood(){return parseFloat(document.getElementById('wife-food').value)
 function getAmt(e){return e.variable?(parseFloat(varAmounts[e.id])||0):(e.amount||0);}
 function isActive(e,mi){return e.activeUntil===undefined?true:mi<=e.activeUntil;}
 function toPEN(e,mi){
+  if(mi<START)return 0;
   if(e.optional&&!checks[e.id+'-'+mi])return 0;
   if(!isActive(e,mi))return 0;
   const a=getAmt(e);return e.currency==='USD'?a*getTc():a;
 }
-function toggleCheck(id,mi){checks[id+'-'+mi]=!checks[id+'-'+mi];render();}
+function toggleCheck(id,mi){if(mi<START)return;checks[id+'-'+mi]=!checks[id+'-'+mi];render();}
 function onVar(id,v){varAmounts[id]=v;render();}
 function onExtraPEN(mi,v){extraPEN[mi]=parseFloat(v)||0;render();}
 function onExtraUSD(mi,v){extraUSD[mi]=parseFloat(v)||0;render();}
 
-// Wife's surplus in PEN per month (passive PEN savings)
 function getWifeSurplus(mi){
   const tc=getTc();
   const fixed=EXPENSES.filter(e=>isActive(e,mi)&&!e.optional);
@@ -256,111 +233,124 @@ function getWifeSurplus(mi){
   const wBal=getWife()*tc-wH-getFood();
   return wBal>0?wBal:0;
 }
-// Jon's monthly USD savings
 function getJonUSD(){return getJon()-850;}
 
 function buildPENProj(){
+  // months before START: null (no data)
+  // month START onwards: accumulate from INIT_PEN
+  const result=new Array(12).fill(null);
   let bal=INIT_PEN;
-  return MONTHS.map((_,mi)=>{
+  for(let mi=START;mi<12;mi++){
     const interest=bal*RATE;
     const passive=getWifeSurplus(mi);
     const extra=extraPEN[mi]||0;
     const close=bal+interest+passive+extra;
-    const row={open:bal,interest,passive,extra,close};
-    bal=close;return row;
-  });
+    result[mi]={open:bal,interest,passive,extra,close};
+    bal=close;
+  }
+  return result;
 }
 
 function buildUSDProj(){
+  const result=new Array(12).fill(null);
   let bal=INIT_USD;
-  return MONTHS.map((_,mi)=>{
+  for(let mi=START;mi<12;mi++){
     const passive=getJonUSD();
     const extra=extraUSD[mi]||0;
     const close=bal+passive+extra;
-    const row={open:bal,passive,extra,close};
-    bal=close;return row;
-  });
-}
-
-function buildSavHead(cur){
-  return '<th class="sleft" style="min-width:120px">CONCEPTO</th>'+
-    MONTHS.map((m,mi)=>'<th class="'+(mi===CM?'scur':'')+'" style="min-width:82px">'+m+'</th>').join('');
+    result[mi]={open:bal,passive,extra,close};
+    bal=close;
+  }
+  return result;
 }
 
 function render(){
   const tc=getTc();
   const penP=buildPENProj();
   const usdP=buildUSDProj();
-  const mTotals=MONTHS.map((_,mi)=>EXPENSES.reduce((s,e)=>s+toPEN(e,mi),0));
+  const mTotals=MONTHS.map((_,mi)=>mi<START?0:EXPENSES.reduce((s,e)=>s+toPEN(e,mi),0));
   const activeNow=EXPENSES.filter(e=>isActive(e,CM));
   const paidCount=activeNow.filter(e=>checks[e.id+'-'+CM]).length;
   const subsTot=EXPENSES.filter(e=>e.category==='Suscripciones').reduce((s,e)=>s+toPEN(e,CM),0);
   const penEOY=penP[11].close;
   const usdEOY=usdP[11].close;
   const patrimonioEOY=penEOY+usdEOY*tc;
+  const patriNow=INIT_PEN+INIT_USD*tc;
 
   // Cards
   document.getElementById('cards').innerHTML=
     '<div class="card" style="border:1px solid #7B61FF22"><div class="card-corner" style="background:#7B61FF10"></div><div class="card-label" style="color:#7B61FF">Gastos mes actual</div><div class="card-value">S/ '+fmt(mTotals[CM])+'</div><div class="card-sub">'+MONTH_FULL[CM]+'</div></div>'+
-    '<div class="card" style="border:1px solid #00C89622"><div class="card-corner" style="background:#00C89610"></div><div class="card-label" style="color:#00C896">Ahorro soles hoy</div><div class="card-value">S/ '+fmt(penP[CM].open)+'</div><div class="card-sub">4.5% anual</div></div>'+
-    '<div class="card" style="border:1px solid #0EA5E922"><div class="card-corner" style="background:#0EA5E910"></div><div class="card-label" style="color:#0EA5E9">Ahorro USD hoy</div><div class="card-value">$ '+fmtU(usdP[CM].open)+'</div><div class="card-sub">sin rentabilidad</div></div>'+
+    '<div class="card" style="border:1px solid #00C89622"><div class="card-corner" style="background:#00C89610"></div><div class="card-label" style="color:#00C896">Ahorro soles hoy</div><div class="card-value">S/ '+fmt(INIT_PEN)+'</div><div class="card-sub">14 abr · 4.5% anual</div></div>'+
+    '<div class="card" style="border:1px solid #0EA5E922"><div class="card-corner" style="background:#0EA5E910"></div><div class="card-label" style="color:#0EA5E9">Ahorro USD hoy</div><div class="card-value">$ '+fmtU(INIT_USD)+'</div><div class="card-sub">14 abr · sin renta</div></div>'+
     '<div class="card" style="border:1px solid #FF9F4322"><div class="card-corner" style="background:#FF9F4310"></div><div class="card-label" style="color:#FF9F43">Patrimonio dic 2026</div><div class="card-value" style="color:#3B6D11">S/ '+fmt(patrimonioEOY)+'</div><div class="card-sub">soles + USD × TC</div></div>'+
-    '<div class="card" style="border:1px solid #FF6B9D22"><div class="card-corner" style="background:#FF6B9D10"></div><div class="card-label" style="color:#FF6B9D">Pagado · '+MONTHS[CM]+'</div><div class="card-value">'+paidCount+' / '+activeNow.length+'</div><div class="card-sub">'+(paidCount===activeNow.length?'✅ Todo al día':'Faltan '+(activeNow.length-paidCount))+'</div><div class="prog-bg"><div class="prog-fill" style="width:'+(activeNow.length?paidCount/activeNow.length*100:0)+'%;background:#FF6B9D"></div></div></div>';
+    '<div class="card" style="border:1px solid #FF6B9D22"><div class="card-corner" style="background:#FF6B9D10"></div><div class="card-label" style="color:#FF6B9D">Pagado · Abr</div><div class="card-value">'+paidCount+' / '+activeNow.length+'</div><div class="card-sub">'+(paidCount===activeNow.length?'✅ Todo al día':'Faltan '+(activeNow.length-paidCount))+'</div><div class="prog-bg"><div class="prog-fill" style="width:'+(activeNow.length?paidCount/activeNow.length*100:0)+'%;background:#FF6B9D"></div></div></div>';
 
-  // Savings headers
+  // Savings table heads (only show Apr–Dec)
+  const headHtml='<th class="sleft">CONCEPTO</th>'+
+    MONTHS.map((m,mi)=>{
+      if(mi<START)return'';
+      return'<th class="'+(mi===CM?'scur':'')+'" style="min-width:80px">'+m+'</th>';
+    }).join('');
+  document.getElementById('pen-head').innerHTML=headHtml;
+  document.getElementById('usd-head').innerHTML=headHtml;
+
   document.getElementById('pen-eoy-hdr').textContent='S/ '+fmt(penEOY)+' dic';
   document.getElementById('usd-eoy-hdr').textContent='$ '+fmtU(usdEOY)+' dic';
-  document.getElementById('pen-head').innerHTML=buildSavHead();
-  document.getElementById('usd-head').innerHTML=buildSavHead();
 
-  // PEN table
+  // PEN rows
   const penRows=[
-    {label:'Saldo inicial', color:'#7B61FF', vals:penP.map(p=>fmt(p.open))},
-    {label:'Interés 4.5%/a',color:'#9b8fcc', vals:penP.map(p=>'+'+fmt(p.interest))},
-    {label:'Ahorro esposa',  color:'#00C896', vals:penP.map(p=>'+'+fmt(p.passive))},
-    {label:'Extra (variable)',color:'#FF9F43',vals:null,isInput:true,inputFn:'onExtraPEN'},
-    {label:'SALDO FINAL',    color:'#1a1a2e', vals:penP.map(p=>fmt(p.close)),bold:true},
+    {label:'Saldo inicial', color:'#7B61FF', fn:p=>fmt(p.open)},
+    {label:'Interés 4.5%/a',color:'#9b8fcc', fn:p=>'+'+fmt(p.interest)},
+    {label:'Ahorro esposa',  color:'#00C896', fn:p=>'+'+fmt(p.passive)},
+    {label:'Extra (variable)',color:'#FF9F43',isInput:true,inputFn:'onExtraPEN',arr:extraPEN},
+    {label:'SALDO FINAL',    color:'#1a1a2e', fn:p=>fmt(p.close),bold:true},
   ];
   document.getElementById('pen-body').innerHTML=penRows.map((row,ri)=>{
     const tds=MONTHS.map((_,mi)=>{
-      const cur=mi===CM;const cs=cur?'background:rgba(123,97,255,0.05)':'';
-      if(row.isInput)return '<td class="'+(cur?'scur':'')+'" style="'+cs+'"><input class="sav-input" type="number" placeholder="0" value="'+(extraPEN[mi]||'')+'" oninput="'+row.inputFn+'('+mi+',this.value)" style="border-color:'+(cur?'#7B61FF':'#ddd')+'"></td>';
+      if(mi<START)return'';
+      const p=penP[mi];const cur=mi===CM;const cs=cur?'background:rgba(123,97,255,0.05)':'';
+      if(row.isInput)return'<td class="'+(cur?'scur':'')+'" style="'+cs+'"><input class="sav-input" type="number" placeholder="0" value="'+(row.arr[mi]||'')+'" oninput="'+row.inputFn+'('+mi+',this.value)" style="border-color:'+(cur?'#7B61FF':'#ddd')+'"></td>';
+      const val=row.fn(p);
       const c=row.bold?'#3B6D11':(ri===1?'#9b8fcc':ri===2?'#00C896':'#555');
-      return '<td class="'+(cur?'scur':'')+'" style="font-weight:'+(row.bold?800:500)+';color:'+c+';'+cs+'">'+row.vals[mi]+'</td>';
+      const cls=(mi>CM)?'sfut':'';
+      return'<td class="'+(cur?'scur':cls)+'" style="font-weight:'+(row.bold?800:500)+';color:'+c+';'+cs+'">'+val+'</td>';
     }).join('');
     const bg=row.bold?'#f4f4fa':(ri%2===0?'#fafafa':'#fff');
-    return '<tr style="background:'+bg+'"><td class="sleft" style="border-left-color:'+row.color+';background:'+bg+';font-weight:'+(row.bold?800:500)+';color:'+(row.bold?'#1a1a2e':row.color)+'">'+row.label+'</td>'+tds+'</tr>';
+    return'<tr style="background:'+bg+'"><td class="sleft" style="border-left-color:'+row.color+';background:'+bg+';font-weight:'+(row.bold?800:500)+';color:'+(row.bold?'#1a1a2e':row.color)+'">'+row.label+'</td>'+tds+'</tr>';
   }).join('');
 
-  // USD table
+  // USD rows
   const usdRows=[
-    {label:'Saldo inicial', color:'#0EA5E9', vals:usdP.map(p=>'$ '+fmtU(p.open))},
-    {label:'Ahorro Jon',    color:'#38bdf8', vals:usdP.map(p=>'+ $ '+fmtU(p.passive))},
-    {label:'Extra USD',     color:'#7dd3fc', vals:null,isInput:true,inputFn:'onExtraUSD'},
-    {label:'SALDO FINAL',   color:'#1a1a2e', vals:usdP.map(p=>'$ '+fmtU(p.close)),bold:true},
+    {label:'Saldo inicial', color:'#0EA5E9', fn:p=>'$ '+fmtU(p.open)},
+    {label:'Ahorro Jon',    color:'#38bdf8', fn:p=>'+ $ '+fmtU(p.passive)},
+    {label:'Extra USD',     color:'#7dd3fc', isInput:true,inputFn:'onExtraUSD',arr:extraUSD},
+    {label:'SALDO FINAL',   color:'#0369a1', fn:p=>'$ '+fmtU(p.close),bold:true},
   ];
   document.getElementById('usd-body').innerHTML=usdRows.map((row,ri)=>{
     const tds=MONTHS.map((_,mi)=>{
-      const cur=mi===CM;const cs=cur?'background:rgba(14,165,233,0.05)':'';
-      if(row.isInput)return '<td class="'+(cur?'scur':'')+'" style="'+cs+'"><input class="sav-input usd" type="number" placeholder="0" value="'+(extraUSD[mi]||'')+'" oninput="'+row.inputFn+'('+mi+',this.value)"></td>';
-      const c=row.bold?'#0369a1':(ri===1?'#38bdf8':'#555');
-      return '<td class="'+(cur?'scur':'')+'" style="font-weight:'+(row.bold?800:500)+';color:'+c+';'+cs+'">'+row.vals[mi]+'</td>';
+      if(mi<START)return'';
+      const p=usdP[mi];const cur=mi===CM;const cs=cur?'background:rgba(14,165,233,0.05)':'';
+      if(row.isInput)return'<td class="'+(cur?'scur':'')+'" style="'+cs+'"><input class="sav-input usd" type="number" placeholder="0" value="'+(row.arr[mi]||'')+'" oninput="'+row.inputFn+'('+mi+',this.value)"></td>';
+      const val=row.fn(p);
+      const c=row.bold?'#0369a1':'#38bdf8';
+      const cls=(mi>CM)?'sfut':'';
+      return'<td class="'+(cur?'scur':cls)+'" style="font-weight:'+(row.bold?800:500)+';color:'+c+';'+cs+'">'+val+'</td>';
     }).join('');
     const bg=row.bold?'#f0f8ff':(ri%2===0?'#f7fcff':'#fff');
-    return '<tr style="background:'+bg+'"><td class="sleft" style="border-left-color:'+row.color+';background:'+bg+';font-weight:'+(row.bold?800:500)+';color:'+(row.bold?'#0369a1':row.color)+'">'+row.label+'</td>'+tds+'</tr>';
+    return'<tr style="background:'+bg+'"><td class="sleft" style="border-left-color:'+row.color+';background:'+bg+';font-weight:'+(row.bold?800:500)+';color:'+(row.bold?'#0369a1':row.color)+'">'+row.label+'</td>'+tds+'</tr>';
   }).join('');
 
-  // Patrimonio bar
-  const penNow=penP[CM].open;const usdNow=usdP[CM].open;
-  const patriNow=penNow+usdNow*tc;
+  // Patrimonio
+  const crecimiento=patrimonioEOY-patriNow;
+  const pct=(crecimiento/patriNow*100).toFixed(1);
   document.getElementById('patrimonio').innerHTML=
-    '<div><div style="font-size:9px;letter-spacing:2px;color:#bbb;font-weight:700;text-transform:uppercase;margin-bottom:4px">Patrimonio hoy</div><div style="font-size:24px;font-weight:800;color:#1a1a2e">S/ '+fmt(patriNow)+'</div><div style="font-size:11px;color:#999">S/ '+fmt(penNow)+' + $ '+fmtU(usdNow)+' × '+tc+'</div></div>'+
+    '<div><div style="font-size:9px;letter-spacing:2px;color:#bbb;font-weight:700;text-transform:uppercase;margin-bottom:4px">Patrimonio 14 abr</div><div style="font-size:24px;font-weight:800;color:#1a1a2e">S/ '+fmt(patriNow)+'</div><div style="font-size:11px;color:#999">S/ '+fmt(INIT_PEN)+' + $ '+fmtU(INIT_USD)+' × '+tc+'</div></div>'+
     '<div style="width:1px;background:#eee;margin:0 4px"></div>'+
     '<div><div style="font-size:9px;letter-spacing:2px;color:#bbb;font-weight:700;text-transform:uppercase;margin-bottom:4px">Proyección dic 2026</div><div style="font-size:24px;font-weight:800;color:#3B6D11">S/ '+fmt(patrimonioEOY)+'</div><div style="font-size:11px;color:#999">S/ '+fmt(penEOY)+' + $ '+fmtU(usdEOY)+' × TC</div></div>'+
     '<div style="width:1px;background:#eee;margin:0 4px"></div>'+
-    '<div><div style="font-size:9px;letter-spacing:2px;color:#bbb;font-weight:700;text-transform:uppercase;margin-bottom:4px">Crecimiento</div><div style="font-size:24px;font-weight:800;color:#00C896">+S/ '+fmt(patrimonioEOY-patriNow)+'</div><div style="font-size:11px;color:#999">'+((patrimonioEOY-patriNow)/patriNow*100).toFixed(1)+'% vs hoy</div></div>';
+    '<div><div style="font-size:9px;letter-spacing:2px;color:#bbb;font-weight:700;text-transform:uppercase;margin-bottom:4px">Crecimiento</div><div style="font-size:24px;font-weight:800;color:#00C896">+S/ '+fmt(crecimiento)+'</div><div style="font-size:11px;color:#999">+'+pct+'% vs hoy</div></div>';
 
-  // Income panel
+  // Income
   document.getElementById('income-month').textContent=MONTH_FULL[CM];
   const jonUSD=getJonUSD();
   const fixedNow=EXPENSES.filter(e=>isActive(e,CM)&&!e.optional);
@@ -373,15 +363,18 @@ function render(){
   document.getElementById('wife-sal-pen').textContent='S/ '+fmt(getWife()*tc);
   document.getElementById('wife-hogar').textContent='− S/ '+fmt(wH);
   const wbEl=document.getElementById('wife-bal');wbEl.textContent='S/ '+fmt(wBal);wbEl.className='val '+(wBal>500?'pos':wBal>0?'warn':'bad');
-  document.getElementById('res-usd').textContent='$ '+fmtU(jonUSD)+' / S/ '+fmt(jonUSD*tc);
-  const rp=document.getElementById('res-pen');rp.textContent='S/ '+fmt(wBal>0?wBal:0);rp.className='val '+(wBal>0?'pos':'bad');
-  document.getElementById('res-extra').textContent='S/ '+fmt(extraPEN[CM]||0)+' ('+MONTHS[CM]+')';
-  const rt=document.getElementById('res-total');rt.textContent='S/ '+fmt(resTotal);rt.className='val '+(resTotal>0?'pos':'bad');
+  document.getElementById('res-usd').textContent='$ '+fmtU(jonUSD)+' → S/ '+fmt(jonUSD*tc);
+  const rpEl=document.getElementById('res-pen');rpEl.textContent='S/ '+fmt(wBal>0?wBal:0);rpEl.className='val '+(wBal>0?'pos':'bad');
+  document.getElementById('res-extra').textContent='S/ '+fmt(extraPEN[CM]||0);
+  const rtEl=document.getElementById('res-total');rtEl.textContent='S/ '+fmt(resTotal);rtEl.className='val '+(resTotal>0?'pos':'bad');
   document.getElementById('fam-pct').textContent=famPct.toFixed(1)+'%';
 
   // Expense table
   let th='<tr><th class="ncol">GASTO</th><th class="acol">PRECIO REF.</th>';
-  MONTHS.forEach((m,mi)=>{th+='<th class="'+(mi===CM?'ecur':'')+'">'+m+'</th>';});
+  MONTHS.forEach((m,mi)=>{
+    const cls=mi<START?'epast':mi===CM?'ecur':'';
+    th+='<th class="'+cls+'">'+m+'</th>';
+  });
   th+='</tr>';
   document.getElementById('thead').innerHTML=th;
 
@@ -399,17 +392,27 @@ function render(){
       const note=exp.note?'<span class="notelbl">'+exp.note+'</span>':'';
       let cells='';
       MONTHS.forEach((_,mi)=>{
-        const active=isActive(exp,mi),checked=!!checks[exp.id+'-'+mi],cur=mi===CM;
-        if(!active){cells+='<td class="mcell'+(cur?' ecur':'')+'"><div class="inact">—</div></td>';return;}
-        cells+='<td class="mcell'+(cur?' ecur':'')+'"><div class="chk" style="'+(checked?'background:'+color+';border-color:'+color:'border-color:#e0e0e0')+'" onclick="toggleCheck('+exp.id+','+mi+')">'+(checked?'✓':'')+'</div></td>';
+        const past=mi<START;
+        const active=isActive(exp,mi);
+        const checked=!!checks[exp.id+'-'+mi];
+        const cur=mi===CM;
+        const cellCls='mcell'+(cur?' ecur':past?' epast':'');
+        if(past){cells+='<td class="'+cellCls+'"><div class="inact">—</div></td>';return;}
+        if(!active){cells+='<td class="'+cellCls+'"><div class="inact">—</div></td>';return;}
+        cells+='<td class="'+cellCls+'"><div class="chk" style="'+(checked?'background:'+color+';border-color:'+color:'border-color:#e0e0e0')+'" onclick="toggleCheck('+exp.id+','+mi+')">'+(checked?'✓':'')+'</div></td>';
       });
       tb+='<tr style="background:'+bg+'"><td class="ncell" style="background:'+bg+';border-left-color:'+color+'">'+exp.name+note+optL+badge+'</td><td class="acell">'+amtHtml+'</td>'+cells+'</tr>';
     });
   });
   tb+='<tr class="sep"><td colspan="15"></td></tr>';
-  let tc2='';MONTHS.forEach((_,mi)=>{tc2+='<td class="'+(mi===CM?'ecur':'')+'">'+(mTotals[mi]/1000).toFixed(1)+'k</td>';});
+  let tc2='';
+  MONTHS.forEach((_,mi)=>{
+    const cls=mi<START?'epast':mi===CM?'ecur':'';
+    tc2+='<td class="'+cls+'">'+(mi<START?'—':(mTotals[mi]/1000).toFixed(1)+'k')+'</td>';
+  });
   tb+='<tr class="trow"><td class="ncell">TOTAL MES</td><td></td>'+tc2+'</tr>';
-  let sc='';MONTHS.forEach((_,mi)=>{sc+='<td>S/'+fmt(mTotals[mi])+'</td>';});
+  let sc='';
+  MONTHS.forEach((_,mi)=>{sc+='<td>'+(mi<START?'—':'S/'+fmt(mTotals[mi]))+'</td>';});
   tb+='<tr class="srow"><td class="ncell">en soles</td><td></td>'+sc+'</tr>';
   document.getElementById('tbody').innerHTML=tb;
 }
